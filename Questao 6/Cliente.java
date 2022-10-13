@@ -5,7 +5,7 @@ public class Cliente{
     public Cliente() {
     }
 
-    public Cliente(String nome, ContaCorrente conta) {
+    public Cliente(String nome) {
         this.nome = nome;
         this.conta = conta;
     }
