@@ -1,4 +1,4 @@
-package Questao2;
+package questao2;
 
 public interface Local {
     public int getQuantPessoasEstacionamento();

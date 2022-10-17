@@ -1,4 +1,4 @@
-package Questao1;
+package questao1;
 
 public class Produto extends ProdutoDecorator{
 

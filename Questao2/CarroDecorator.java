@@ -1,4 +1,4 @@
-package Questao2;
+package questao2;
 
 public abstract class CarroDecorator implements Local{
     protected Local local;
