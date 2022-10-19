@@ -1,3 +1,4 @@
+package Questao6;
 public class ContaCorrente {
     protected float saldo;
 
@@ -29,6 +30,23 @@ public class ContaCorrente {
     }
     
     public boolean transferir(ContaCorrente conta){
+
         return false;
+    }
+
+    public boolean transferir(ContaCorrente conta, float valor){
+        // if(this.saldo < valor){
+        //     return false;
+        // }else{
+        //     this.saldo = this.saldo-valor;
+        //     conta.saldo = conta.saldo+valor;
+        //     return true;
+        // }
+        if(this.sacar(valor)){
+            conta.depositar(valor);
+            return true;
+        }else{
+            return false;
+        }
     }
 }

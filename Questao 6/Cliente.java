@@ -1,13 +1,16 @@
+package Questao6;
+
+import java.util.ArrayList;
+
 public class Cliente{
     private String nome;
-    private ContaCorrente conta;
+    private ArrayList <ContaCorrente> conta;
 
     public Cliente() {
     }
 
     public Cliente(String nome) {
         this.nome = nome;
-        this.conta = conta;
     }
 
     public String getNome() {
@@ -18,16 +21,36 @@ public class Cliente{
         this.nome = nome;
     }
 
-    public ContaCorrente getConta() {
+    public ArrayList<ContaCorrente> getContas() {
         return conta;
     }
 
-    public void setConta(ContaCorrente conta) {
+    public ContaCorrente getConta(int index){
+        return conta.get(index);
+    }
+
+    public ContaCorrente getConta(){
+        return conta.get(0);
+    }
+
+    public void setConta(ArrayList<ContaCorrente> conta) {
         this.conta = conta;
+    }
+
+    public void adicionarConta(ContaCorrente conta) {
+        this.conta.add(conta);
+    }
+
+    public void removerConta(ContaCorrente conta) {
+        this.conta.remove(conta);
     }
     
     @Override
     public String toString() {
-        return "Cliente\n -Nome: "+nome+"\n"+conta.toString();
+        String s = "Cliente\n -Nome: "+nome+"\n";
+        for (ContaCorrente c : conta) {
+            s = s+c.toString();
+        }
+        return s;
     }
 }
