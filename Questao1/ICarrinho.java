@@ -1,4 +1,4 @@
-package questao1;
+package Questao1;
 
 public interface ICarrinho {
     public float getValorCompra();
